@@ -244,6 +244,11 @@ form > button {
   width: 148px;
   height: 40px;
 }
+.widget {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
 /*===============================6th Task===============================*/
 #boxes {
