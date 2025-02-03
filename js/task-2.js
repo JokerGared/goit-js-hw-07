@@ -27,10 +27,10 @@ const images = [
 ];
 
 const galleryList = document.querySelector('.gallery');
-function imageTemaplate(img) {
-  return `<li class = "gallery-item"><img src = ${img.url} alt = "${img.alt}" width="360" height="300"></li>`;
+function imageTemplate(img) {
+  return `<li class = "gallery-item"><img src = "${img.url}" alt = "${img.alt}" width="360" height="300"></li>`;
 }
 function imagesTemplate(imgs) {
-  return imgs.map(imageTemaplate).join('');
+  return imgs.map(imageTemplate).join('');
 }
 galleryList.insertAdjacentHTML('afterbegin', imagesTemplate(images));
