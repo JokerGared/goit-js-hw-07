@@ -1,0 +1,294 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 16px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #fafafa;
+  color: #212121;
+  line-height: 1.5;
+}
+/*===============================My reset===============================*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+button {
+  cursor: pointer;
+  border: none;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding-left: 0;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+label {
+  display: block;
+}
+
+/*===============================My Commons===============================*/
+@font-face {
+  font-family: Montserrat;
+  src: url('../fonts/Montserrat-VariableFont_wght.ttf') format('truetype');
+}
+* {
+  font-family: 'Montserrat', sans-serif;
+}
+input {
+  display: block;
+  background-color: transparent;
+  outline: transparent;
+  border: 1px solid #808080;
+  border-radius: 8px;
+  padding: 7px 37px;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+input:hover {
+  border-color: #000;
+}
+body > p > a {
+  padding: 8px 32px;
+  background-color: #4e75ff;
+  color: #fafafa;
+  border-radius: 8px;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+body > p > a:hover,
+body > p > a:focus {
+  background-color: #6c8cff;
+}
+body > p {
+  align-self: flex-start;
+  margin-left: 16px;
+  margin-bottom: 16px;
+}
+button {
+  background-color: #4e75ff;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+button:hover,
+button:focus {
+  background-color: #6c8cff;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+body > ul:first-child {
+  margin: auto;
+}
+body > ul:first-child > li {
+  padding: 8px 32px;
+  background-color: #4e75ff;
+  color: #fafafa;
+  border-radius: 8px;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+body > ul:first-child > li:not(:last-child) {
+  margin-bottom: 32px;
+}
+body > ul:first-child > li:hover,
+body > ul:first-child > li:focus {
+  background-color: #6c8cff;
+}
+/*===============================1st Task===============================*/
+
+.item {
+  border-radius: 8px;
+  padding: 16px;
+  max-width: 392px;
+  background-color: #f6f6fe;
+}
+
+.item:not(:last-child) {
+  margin-bottom: 24px;
+}
+
+.item > h2 {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.33333;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+  margin-bottom: 16px;
+}
+
+.item li {
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+  border: 1px solid #808080;
+  border-radius: 4px;
+  width: 360px;
+  height: 40px;
+  padding: 8px 0 8px 16px;
+}
+
+.item li:not(:last-child) {
+  margin-bottom: 8px;
+}
+/*===============================2nd Task===============================*/
+.gallery {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 1158px;
+  padding: 0 15px;
+  row-gap: 48px;
+  column-gap: 24px;
+  padding: 16px;
+}
+
+.gallery-item {
+  width: calc((100% - 48px) / 3);
+}
+
+/*===============================3d Task===============================*/
+h1 {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.33333;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+}
+#name-input {
+  border-radius: 4px;
+  width: 360px;
+  height: 40px;
+  margin-bottom: 16px;
+}
+
+#name-input::placeholder {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+}
+/*===============================4th Task===============================*/
+label {
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+  margin-bottom: 8px;
+}
+label + label {
+  margin-bottom: 16px;
+}
+label > input {
+  width: 360px;
+  height: 40px;
+}
+label > input::placeholder {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+}
+form > button {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #fff;
+  border-radius: 8px;
+  padding: 8px 16px;
+  width: 86px;
+  height: 40px;
+}
+/*===============================5th Task===============================*/
+.widget > p {
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+  margin-bottom: 16px;
+}
+.change-color {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #fff;
+  border-radius: 8px;
+  padding: 8px 16px;
+  width: 148px;
+  height: 40px;
+}
+
+/*===============================6th Task===============================*/
+#boxes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 44px;
+  padding: 32px;
+  background-color: #f6f6fe;
+  border-radius: 8px;
+}
+#controls {
+  display: inline-flex;
+  gap: 16px;
+  align-items: center;
+  justify-content: center;
+  padding: 32px;
+  background-color: #f6f6fe;
+  border-radius: 8px;
+  margin-bottom: 16px;
+}
+#controls button:nth-child(2) {
+  border-radius: 8px;
+  padding: 8px 16px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #fff;
+  width: 120px;
+  height: 40px;
+}
+#controls button:nth-child(3) {
+  border-radius: 8px;
+  padding: 8px 16px;
+  background-color: #ff4e4e;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #fff;
+  width: 120px;
+  height: 40px;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+#controls button:nth-child(3):hover,
+#controls button:nth-child(3):focus {
+  background-color: #ff7070;
+}
