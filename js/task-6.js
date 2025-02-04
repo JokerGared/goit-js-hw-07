@@ -21,10 +21,9 @@ function onCreateButtonClick() {
     input.value = '';
     return;
   }
+  boxes.innerHTML = '';
   for (let i = 0; i < input.value; i++) {
     createBoxes(i);
-
-    // markup += '<div></div>';
   }
   boxes.appendChild(fragment);
   input.value = '';
@@ -33,15 +32,11 @@ function onDestroyButtonClick() {
   destroyBoxes();
 }
 function createBoxes(amount) {
-  // let markup = '';
-  const boxAmount = boxes.children.length;
-  const size = 30 + boxAmount * 10;
   const newBox = document.createElement('div');
-  newBox.style.width = `${size + amount * 10}px`;
-  newBox.style.height = `${size + amount * 10}px`;
+  newBox.style.width = `${30 + amount * 10}px`;
+  newBox.style.height = `${30 + amount * 10}px`;
   newBox.style.backgroundColor = getRandomHexColor();
   fragment.appendChild(newBox);
-  // box.insertAdjacentHTML('beforeend', markup);
 }
 function destroyBoxes() {
   boxes.innerHTML = '';
