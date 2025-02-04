@@ -21,11 +21,10 @@ function onCreateButtonClick() {
     input.value = '';
     return;
   }
-  boxes.innerHTML = '';
   for (let i = 0; i < input.value; i++) {
     createBoxes(i);
   }
-  boxes.appendChild(fragment);
+  boxes.replaceChildren(fragment);
   input.value = '';
 }
 function onDestroyButtonClick() {
