@@ -7,7 +7,6 @@ const createButton = document.querySelector('[data-create]');
 const destroyButton = document.querySelector('[data-destroy]');
 const input = document.querySelector('#controls>input');
 const boxes = document.querySelector('#boxes');
-const fragment = document.createDocumentFragment();
 createButton.addEventListener('click', onCreateButtonClick);
 destroyButton.addEventListener('click', onDestroyButtonClick);
 function onCreateButtonClick() {
@@ -21,21 +20,22 @@ function onCreateButtonClick() {
     input.value = '';
     return;
   }
-  for (let i = 0; i < input.value; i++) {
-    createBoxes(i);
-  }
-  boxes.replaceChildren(fragment);
+  createBoxes(input.value);
   input.value = '';
 }
 function onDestroyButtonClick() {
   destroyBoxes();
 }
 function createBoxes(amount) {
-  const newBox = document.createElement('div');
-  newBox.style.width = `${30 + amount * 10}px`;
-  newBox.style.height = `${30 + amount * 10}px`;
-  newBox.style.backgroundColor = getRandomHexColor();
-  fragment.appendChild(newBox);
+  const fragment = document.createDocumentFragment();
+  for (let i = 0; i < amount; i++) {
+    const newBox = document.createElement('div');
+    newBox.style.width = `${30 + i * 10}px`;
+    newBox.style.height = `${30 + i * 10}px`;
+    newBox.style.backgroundColor = getRandomHexColor();
+    fragment.appendChild(newBox);
+  }
+  boxes.replaceChildren(fragment);
 }
 function destroyBoxes() {
   boxes.innerHTML = '';
